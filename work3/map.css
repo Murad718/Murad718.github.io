@@ -1,0 +1,463 @@
+/*СТИЛИ ДЛЯ ЗАГОЛОВКА*/
+.map__title{
+    font-size:30px;
+    color:#eee;    /*ЦЕТ ШРИФТА*/
+    margin-top:30px;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;  /*ОЦЕНТРИРОВАНИЕ ШРИФТА*/ 
+}
+/*СТИЛИ ДЛЯ ЗАГОЛОВКА*/
+
+/*СТИЛИ ДЛЯ ПОДЗАГОЛОВКА*/   
+.map__subtitle{
+    font-size:30px;
+    color:#eee;    /*ЦЕТ ШРИФТА*/
+    font-weight:300; 
+    margin-top:20px;
+    text-align:center; /*ОЦЕНТРИРОВАНИЕ ШРИФТА*/ 
+    font-family: 'Roboto', sans-serif;
+} 
+/*СТИЛИ ДЛЯ ПОДЗАГОЛОВКА*/
+
+/*СТИЛИ ДЛЯ ОПИСАНИЯ*/
+.map__description{
+    min-width:50%;
+    max-width:70%;
+    font-weight:300; 
+    text-align:center; 
+    color:#eee;    /*ЦЕТ ШРИФТА*/
+    margin:0 auto;  /*ОЦЕНТРИРОВАНИЕ ШРИФТА*/  
+    font-size:20px;
+    font-family: 'Roboto', sans-serif;  
+    margin-bottom:120px; 
+}
+/*СТИЛИ ДЛЯ ОПИСАНИЯ*/
+
+
+.wrapper{
+    background-color:black; /*ФОН СТРАНИЦЫ*/
+}
+
+
+
+
+
+
+
+/*СТИЛИ ДЛЯ ШАПКИ*/
+
+.header-container {
+    width: 1186px;
+    position: relative;
+    margin: 0 auto 0 auto;
+                    /* Тут менять цвет фона шапки,розкоментировать и вписать свой цвет
+    но также, придеться сменить гифки в хедере так, как у них черний фон
+    background: black; */
+}
+header {
+    text-align: center;
+}
+
+header>a>img{
+    object-fit:cover; 
+}
+
+
+@media(max-width:720px){
+    .facel{
+        display:none; 
+    }
+    .map__title{
+        font-size:25px;
+        color:#eee;    /*ЦЕТ ШРИФТА*/
+        margin-top:20px;
+        font-family: 'Roboto', sans-serif;
+        text-align:center;  /*ОЦЕНТРИРОВАНИЕ ШРИФТА*/ 
+    }
+    .map__subtitle{
+        font-size:25px;
+        color:#eee;    /*ЦЕТ ШРИФТА*/
+        font-weight:300; 
+        margin-top:10px;
+        text-align:center; /*ОЦЕНТРИРОВАНИЕ ШРИФТА*/ 
+        font-family: 'Roboto', sans-serif;
+    } 
+    .main_contaiter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:30px 0px 30px 0px;
+    }
+    .header__img{
+        width:100%;
+        max-height:200px; 
+        min-height:180px;  
+    }
+    .map__description{
+       font-size:16px;
+       max-width:90%; 
+    }
+}
+
+/*СТИЛИ ДЛЯ ШАПКИ*/
+
+
+/* СТИЛИ ДЛЯ КУБИКА */
+#forcube-left {
+    position: absolute;
+    left: 120px;
+    top: 90px;
+    z-index: 100;
+}
+.AZdom {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    transition: all .5s ease-out;
+    perspective: 60000px;
+    cursor: pointer;
+    margin-left: -50px;
+}
+
+.AZdom:hover {
+    transform: scale(1.5);
+}
+
+.AZcube {
+    animation: 3s linear 0s infinite normal none running AZrotate;
+}
+
+.AZcubeIn {
+    transform: rotateX(0deg) rotateY(36deg) rotateZ(45deg);
+}
+
+.AZcube,
+.AZcubeIn {
+    position: relative;
+}
+
+.AZcubeIn div {
+    position: absolute;
+    border: 1px solid #aaa;
+    background: transparent;
+    box-sizing: content-box;
+}
+
+.AZcube,
+.AZcubeIn,
+.AZcubeIn div {
+    width: 45px;
+    height: 45px;
+    transform-origin: 50% 50% -23px;
+    transform-style: preserve-3d;
+    background-size: cover;
+}
+
+#AZCubeBack {
+    transform: rotateY(0);
+    background-image: url('img/1.jpg');
+}
+
+#AZCubeLeft {
+    transform: rotateY(90deg);
+    background-image: url('img/2.jpg');
+}
+
+#AZCubeRight {
+    transform: rotateY(-90deg);
+    background-image: url('img/3.jpg');
+}
+
+#AZCubeTop {
+    transform: rotateX(90deg) rotateZ(-90deg);
+    background-image: url('img/6.jpg');
+}
+
+#AZCubeBottom {
+    transform: rotateX(-90deg) rotateZ(-90deg);
+    background-image: url('img/5.jpg');
+}
+
+#AZCubeFront {
+    transform: rotateX(180deg) rotateZ(-90deg);
+    background-image: url('img/4.jpg');
+}
+
+@keyframes AZrotate {
+    from {
+        transform: rotateY(45deg) rotateZ(45deg) rotateX(0)
+    }
+
+    to {
+        transform: rotateY(45deg) rotateZ(45deg) rotateX(-360deg)
+    }
+}
+/* СТИЛИ ДЛЯ КУБИКА */
+
+
+/*СТИЛИ ДЯЛ КАРТЫ*/
+.main_contaiter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:50px 0px 50px 0px;
+}
+.map-img-block{
+
+    /* Для изменения ширины карты введите соответсвующее значение */
+    width:30%;
+
+    /* Для изменения ширины рамки задайте нужное значение */
+    border:30px solid;
+
+    /* Для изменения изображения рамки - измените путь и выставите значение равное ширине рамки в пикселях*/
+    border-image: url('img/border-img.jpg') 59;            
+}
+.unchanging_img{
+    width:100%; 
+}
+.changing_img{
+    position: absolute;
+    transition:width 0.3s ease;
+}   
+/*СТИЛИ ДЯЛ КАРТЫ*/
+
+
+/*СТИЛИ ДЛЯ ПОДВАЛА*/
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.8em 0;
+    border-top: 1px solid #666;
+    background-color: rgba(44, 44, 44, 0.74);
+    color: #aaa;
+    font-family: Arial;
+    z-index: 199;
+    height:30px; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer-container {
+    /* ширина ограничивающая подвал */
+    width: 80%;
+    margin: 0 auto;
+    display:flex; 
+    justify-content:space-between; 
+    height:100%;
+    align-items:center;  
+}
+
+@media(max-width:630px){
+    .footer-container{
+        width:95%;  
+    }
+
+}
+@media(max-width:530px){
+    .slang{
+        display:none;  
+    }
+
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    margin-top: -10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.1;
+    text-indent: 0;
+    text-align: left;
+    color: #eee;
+
+}
+
+footer a,
+footer a:visited {
+    color: #ff8;
+    font-weight: 700;
+}
+
+footer .social {
+    font-family: Arial;
+    font-weight: 700;
+    display:flex;
+    flex-direction:column;  
+}
+footer .social div{
+    display:flex;
+}
+
+.social a {
+    display: inline-block;
+    margin-right: 6px;
+    height: 24px;
+    width: 24px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    margin-top: -8px;
+}
+
+.social a:hover {
+    opacity: 1;
+}
+
+.slang{
+    margin-right:10px;
+    margin-left:10px; 
+}
+
+.i-vkontakte {
+    background-color: #4680c2;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.623 7.66c.12-.372 0-.643-.525-.643h-1.745c-.44 0-.644.237-.763.491 0 0-.898 2.17-2.152 3.576-.406.406-.593.542-.813.542-.119 0-.271-.136-.271-.508V7.644c0-.44-.136-.644-.509-.644H10.1c-.27 0-.44.203-.44.407 0 .423.627.525.694 1.711v2.576c0 .559-.101.66-.322.66-.593 0-2.033-2.185-2.897-4.676-.17-.492-.339-.678-.78-.678H4.593C4.085 7 4 7.237 4 7.491c0 .458.593 2.762 2.762 5.813 1.44 2.084 3.49 3.202 5.338 3.202 1.118 0 1.254-.254 1.254-.678v-1.575c0-.509.101-.594.457-.594.254 0 .712.136 1.746 1.136 1.186 1.186 1.39 1.728 2.05 1.728h1.745c.509 0 .746-.254.61-.745-.152-.492-.728-1.203-1.474-2.05-.407-.475-1.017-1-1.203-1.255-.254-.339-.186-.474 0-.78-.017 0 2.118-3.015 2.338-4.032' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.i-facebook {
+    background-color: #3b5998;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.423 20v-7.298h2.464l.369-2.845h-2.832V8.042c0-.824.23-1.385 1.417-1.385h1.515V4.111A20.255 20.255 0 0014.148 4c-2.183 0-3.678 1.326-3.678 3.76v2.097H8v2.845h2.47V20h2.953z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.i-ok {
+    background-color: #eb722e;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.674 6.536a1.69 1.69 0 00-1.688 1.688c0 .93.757 1.687 1.688 1.687a1.69 1.69 0 001.688-1.687 1.69 1.69 0 00-1.688-1.688zm0 5.763a4.08 4.08 0 01-4.076-4.075 4.08 4.08 0 014.076-4.077 4.08 4.08 0 014.077 4.077 4.08 4.08 0 01-4.077 4.075zm-1.649 3.325a7.633 7.633 0 01-2.367-.98 1.194 1.194 0 011.272-2.022 5.175 5.175 0 005.489 0 1.194 1.194 0 111.272 2.022 7.647 7.647 0 01-2.367.98l2.279 2.28a1.194 1.194 0 01-1.69 1.688l-2.238-2.24-2.24 2.24a1.193 1.193 0 11-1.689-1.689l2.279-2.279' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.i-telegram {
+    background-color: #64a9dc;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.92 6.089L4.747 11.555c-.967.388-.962.928-.176 1.168l3.534 1.104 1.353 4.146c.164.454.083.634.56.634.368 0 .53-.168.736-.368.13-.127.903-.88 1.767-1.719l3.677 2.717c.676.373 1.165.18 1.333-.628l2.414-11.374c.247-.99-.378-1.44-1.025-1.146zM8.66 13.573l7.967-5.026c.398-.242.763-.112.463.154l-6.822 6.155-.265 2.833-1.343-4.116z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.i-whatsapp {
+    background-color: #65bc54;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 11.794c0 4.304-3.517 7.794-7.855 7.794a7.87 7.87 0 01-3.796-.97L4 20l1.418-4.182a7.714 7.714 0 01-1.127-4.024C4.29 7.489 7.807 4 12.145 4S20 7.49 20 11.794zm-7.855-6.553c-3.641 0-6.603 2.94-6.603 6.553A6.48 6.48 0 006.8 15.636l-.825 2.433 2.537-.806a6.6 6.6 0 003.633 1.084c3.642 0 6.604-2.94 6.604-6.553s-2.962-6.553-6.604-6.553zm3.967 8.348c-.049-.08-.177-.128-.37-.223-.192-.095-1.139-.558-1.315-.621-.177-.064-.305-.096-.434.095a10.92 10.92 0 01-.61.749c-.112.128-.224.143-.416.048-.193-.096-.813-.297-1.549-.948a5.76 5.76 0 01-1.07-1.323c-.113-.191-.013-.295.084-.39.086-.086.192-.223.289-.334.096-.112.128-.191.192-.319s.032-.239-.016-.335c-.048-.095-.433-1.035-.594-1.418-.16-.382-.32-.318-.433-.318-.112 0-.24-.016-.369-.016a.71.71 0 00-.513.239c-.177.19-.674.653-.674 1.593s.69 1.848.786 1.976c.096.127 1.332 2.119 3.289 2.884 1.958.764 1.958.51 2.31.477.353-.031 1.14-.461 1.3-.908.16-.446.16-.829.113-.908z' fill='%23FFF' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.buttons{
+    display:flex;
+    align-items:center; 
+}
+
+
+/* to top */
+/* стили для кнопки с скролом */
+#to-top {
+    /* right: 20px; */
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    z-index: 200;
+}
+
+#to-top:hover {
+    opacity: 1;
+}
+
+#to-top a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#to-top a.arrow {
+    position: relative;
+    height: 42px;
+    width: 42px;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    border: 1px solid #cecece;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#to-top a.arrow:before {
+    content: ' ';
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 9px;
+    width: 0px;
+    height: 0px;
+    border: 12px solid transparent;
+    border-top: none;
+    border-bottom: 16px solid #bbb;
+    -webkit-transition: all 0.27s;
+    -o-transition: all 0.27s;
+    transition: all 0.27s;
+}
+
+#to-top a:hover:before {
+    border-bottom-color: #333;
+    opacity: 0.5;
+}
+
+/* плавный скролл */
+html {
+    scroll-behavior: smooth
+}
+
+/* размещение полосы подвала от нижней части окончания контента */
+div#container {
+    min-height: 920px;
+}
+
+/* Стили для формы обратной связи */
+
+
+.open-button {
+    cursor: pointer;
+    margin-top:10px; 
+    position:relative; 
+}
+
+/* Изменить розмер картинки */
+.open-button img {
+    width: 60px;
+}
+
+.form-popup {
+    display: none;
+    bottom: 60px;
+    position:relative;
+    left:80px;
+    top:-80px; 
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    /* изменить ширину формы обратной связи */
+    width: 200px;
+    background: #fff;
+}
+
+.form-popup img {
+    /* розмер иконок ВК и ТГ */
+    width: 75px;
+}
+
+.btn.cancel {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 65px;
+    height: 30px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+/* отступ бегущей строки от низу  */
+#Marquee1 {
+    margin-bottom: 100px;
+}
+/*СТИЛИ ДЛЯ ПОДВАЛА*/

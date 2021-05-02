@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="map.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="wrapper">
+
+
+
+    <!-- КОД ШАПКИ --> 
+        <header>
+             <!-- тут менять картинки в шапке -->
+             <!-- левый огонь -->
+             <img class="facel" src="http://history-klio.ru/img/fire001.gif" alt="">
+             <!-- центральная картинка -->
+             <a href="https://history-klio.ru/"><img class="header__img" src="http://history-klio.ru/img/obzor-hover.jpg"
+                     title="history-klio.ru" alt="history-klio.ru"></a>
+             <!-- правый огонь -->
+             <img class="facel" src="http://history-klio.ru/img/fire001.gif" alt="">
+        </header>
+    <!-- КОД ШАПКИ -->
+
+
+    <!-- КОД КУБИКА -->
+        <div onclick="window.open('http://history-klio.ru/navigation/index.html', 'newWindow', 'menubar=false,location=false,resizable=false,scrollbars=false,width=800,height=600,top=0,left=0');"
+        id="forcube-left">
+            <div class="AZdom">
+                <div class="AZcube">
+                    <div class="AZcubeIn">
+                        <div id="AZCubeBack"></div>
+                        <div id="AZCubeLeft"></div>
+                        <div id="AZCubeRight"></div>
+                        <div id="AZCubeTop"></div>
+                        <div id="AZCubeBottom"></div>
+                        <div id="AZCubeFront"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- КОД КУБИКА -->
+
+
+    <!-- ЗАГОЛОВОК -->
+        <h1 class="map__title">
+            Главный заголовок
+        </h1>
+    <!-- ЗАГОЛОВОК -->
+
+
+    <!-- ПОДЗАГОЛОВОК -->
+        <h2 class="map__subtitle">
+            Подзаголовок
+        </h2>
+    <!-- ПОДЗАГОЛОВОК -->
+
+
+    <!-- КАРТА -->
+        <div class="main_contaiter">
+
+             <!-- Для изменения изображения - измените путь -->
+            <img src="img/map-1.jpg" class = 'changing_img' alt="Карта" onclick="Show_block()"> 
+
+            <div class="map-img-block">
+
+                <!-- Для изменения изображения - измените путь -->
+                <img src="img/map-1.jpg" class = 'unchanging_img' alt="Карта">
+
+            </div>
+        </div>
+    <!-- КАРТА -->    
+
+    <!-- ОПИСАНИЕ  -->
+        <p class="map__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus iste dignissimos, dicta maiores cupiditate, aliquam veniam error repellat, numquam natus facilis, delectus iusto architecto cumque nam quisquam vel. Pariatur, debitis!
+        </p>
+    <!-- ОПИСАНИЕ  --> 
+
+
+    <!-- КОД ПОДВАЛА -->
+    <footer>
+        <!-- Ограничевающий контейнер подвала -->
+        <div class="footer-container">
+
+            <!-- кнопка обратной связи -->
+
+            <div class="social">
+                <h3>Поделитесь:</h3>
+                <div>
+                    <a class="i-vkontakte" title="ВКонтакте"
+                    href="https://vk.com/share.php?url=https://history-klio.ru/chronology.html&amp;title=Династии, генеалогии. хронологии правлений"
+                    rel="nofollow noopener" target="_blank">
+                    </a>
+                    <a class="i-facebook" title="Facebook"
+                    href="https://www.facebook.com/sharer.php?src=sp&amp;u=https://history-klio.ru/&amp;title=Династии, генеалогии. хронологии правлений"
+                    rel="nofollow noopener" target="_blank">
+                    </a>
+                    <a class="i-ok" title="Одноклассники"
+                    href="https://connect.ok.ru/offer?url=https://history-klio.ru/&amp;title=Династии, генеалогии. хронологии правлений"
+                    rel="nofollow noopener" target="_blank">
+                    </a>
+                    <a class="i-whatsapp" title="WhatsApp"
+                    href="https://api.whatsapp.com/send?text=Династии, генеалогии. хронологии правлений%20https://history-klio.ru/"
+                    rel="nofollow noopener" target="_blank">
+                    </a>
+                    <a class="i-telegram" title="Telegram"
+                    href="tg://msg_url?url=https://history-klio.ru/&amp;text=Династии, генеалогии. хронологии правлений"
+                    rel="nofollow" target="_blank">
+                    </a>
+                </div>
+            </div>
+            <div class="slang">
+                <p>&copy; history-klio.ru 2015&ndash;2020</p>
+                <p>Использование материалов сайта без согласия <a href="mailto:veresk22@yahoo.com">автора</a> запрещено</p>
+            </div>
+            <div class="buttons">
+                <div class="callback open-button">
+                     <div class="form-popup" id="myForm">
+                        <h5>Свяжитесь со мной!</h5>
+                        <!-- Сылки для связи -->
+                        <a href="https://vk.com/im?media=&sel=-27698135" target="_blank"><img src="img/cl_vk.png" alt=""></a>
+                        <a href="https://t.me/Veresk22" target="_blank"><img src="img/cb_teleg.png" alt=""></a>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Закрыть</button>
+                    </div>
+                    <!-- изменить иконку обратной связи -->
+                    <img src="img/callback.png" onclick="openForm()" alt="">
+                </div>
+                <section id="to-top">
+                    <a class="arrow" href="#top"></a>
+                </section>
+            </div>
+        </div>
+    </footer>
+    <!-- КОД ПОДВАЛА -->
+
+
+
+
+<!-- Скрипт для обратной связи -->
+<script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+</script>
+
+<!-- Скрипт нажания на изображение -->
+        <script type="text/javascript">
+            map_img_ch = document.querySelector('.changing_img')
+            map_img_unch = document.querySelector('.unchanging_img')
+            map_img_ch.style.width = map_img_unch.offsetWidth + 'px'
+            is_clicked = false
+            function Show_block(){
+                if(is_clicked){
+                    map_img_ch.style.width = map_img_unch.offsetWidth + 'px'
+                    map_img_ch.style.transform = 'translate(0,0)';
+                    map_img_ch.style.top = 'auto';
+                    map_img_ch.style.position = 'absolute'
+                    is_clicked = false
+                }else{
+                    // Изменить ширину картинки при открытии
+                    map_img_ch.style.width = '60%'
+
+                    map_img_ch.style.transform = 'translate(0,-50%)';
+                    map_img_ch.style.top = '50%';
+                    map_img_ch.style.position = 'fixed'
+                    is_clicked = true
+                }
+            }
+        </script>
+    <!-- Скрипт нажания на изображение -->
+
+
+</body>
+</html>
