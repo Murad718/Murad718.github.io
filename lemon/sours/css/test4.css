@@ -1,0 +1,583 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+/*--------------------*/
+/*-------Переманные---------*/
+/*------------------------------*/
+/*-------Миксины---------*/
+/*------------------------------*/
+/*------------ШРИФТЫ--------------*/
+/*--------------------------------*/
+body {
+  background: #eaeaea; }
+
+.logotype {
+  margin: 150px 0px 120px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 1024px) {
+    .logotype {
+      margin: 150px 0px 80px 0px; } }
+  @media (max-width: 768px) {
+    .logotype {
+      display: none; } }
+
+.nav {
+  padding: 0 20px; }
+  @media (max-width: 768px) {
+    .nav {
+      padding: 0 0px; } }
+  .nav__conteiner {
+    max-width: 1120px;
+    margin: 0 auto;
+    background: #f8f8f8;
+    display: flex;
+    height: 100px;
+    padding: 0px 100px 0px 100px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 13px 0px rgba(11, 12, 12, 0.15); }
+    @media (max-width: 1024px) {
+      .nav__conteiner {
+        padding: 0px 20px 0px 20px; } }
+    @media (max-width: 768px) {
+      .nav__conteiner {
+        background: #fff;
+        box-shadow: none; } }
+  .nav__menu {
+    display: flex;
+    width: 535px;
+    justify-content: space-between;
+    margin: 0 15px; }
+    @media (max-width: 768px) {
+      .nav__menu {
+        display: none; } }
+  .nav__dropdown {
+    display: none;
+    position: absolute;
+    top: 18px;
+    padding: 25px 27px 20px 27px;
+    flex-direction: column;
+    background-color: white;
+    opacity: 0.502;
+    line-height: 23px;
+    box-shadow: 0.366px 2.978px 7px 0px rgba(11, 12, 12, 0.14);
+    z-index: 1; }
+    .nav__dropdown__link {
+      cursor: pointer;
+      transition: color 0.3s;
+      font-size: 12px;
+      font-family: "Josefin Sans";
+      color: #8c8c8c;
+      text-transform: uppercase; }
+      .nav__dropdown__link:hover {
+        color: #000; }
+  .nav__link {
+    position: relative;
+    font-size: 16px;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    margin-right: 5px; }
+    .nav__link a {
+      color: black; }
+    .nav__link span {
+      width: 00%;
+      background: #000;
+      height: 1px;
+      display: flex;
+      transition: width 0.3s; }
+    .nav__link:last-child {
+      margin-right: 0px; }
+    .nav__link:hover span {
+      width: 100%; }
+    .nav__link:hover .nav__dropdown {
+      display: flex; }
+    @media (max-width: 1024px) {
+      .nav__link {
+        font-size: 14px; } }
+  .nav__find {
+    border-width: 1px;
+    border-color: #c2c2c2;
+    border-style: solid;
+    width: 160px;
+    height: 26px;
+    padding-left: 50px;
+    padding-top: 2px;
+    font-size: 12px;
+    font-family: "Josefin Sans";
+    color: black;
+    text-transform: uppercase; }
+    @media (max-width: 1024px) {
+      .nav__find {
+        width: 120px;
+        padding-left: 20px; } }
+    @media (max-width: 768px) {
+      .nav__find {
+        border-width: 0px; } }
+  .nav__find__conteiner {
+    position: relative; }
+    .nav__find__conteiner img {
+      position: absolute;
+      top: 7px;
+      left: 35px; }
+      @media (max-width: 1024px) {
+        .nav__find__conteiner img {
+          left: 5px; } }
+  .nav__burger {
+    display: none;
+    width: 21px;
+    height: 20px;
+    justify-content: space-between;
+    flex-direction: column; }
+    @media (max-width: 768px) {
+      .nav__burger {
+        display: flex; } }
+    .nav__burger span {
+      width: 21px;
+      transition: transform .4s;
+      height: 2px;
+      background: #000; }
+
+.header {
+  width: 100%;
+  padding: 0 20px;
+  margin: 85px 0px; }
+  @media (max-width: 768px) {
+    .header {
+      padding: 0 0px;
+      margin: 0px 0px; } }
+  .header__conteiner {
+    margin: 0 auto;
+    max-width: 1120px;
+    position: relative;
+    background-image: url(../../img/header.png);
+    background-color: #f7f7f7;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0px 50px 90px;
+    box-shadow: inset 0px 0px 6px 7px rgba(0, 0, 0, 0.15); }
+    @media (max-width: 768px) {
+      .header__conteiner {
+        box-shadow: none;
+        height: 205px; } }
+    @media (max-width: 510px) {
+      .header__conteiner {
+        background-image: url(../../img/header__adap.png);
+        height: 205px; } }
+  .header__wrapper {
+    max-width: 360px; }
+    @media (max-width: 768px) {
+      .header__wrapper {
+        display: none; } }
+  .header__title {
+    font-size: 24px;
+    font-family: "Playfair Display";
+    color: #921026;
+    margin: 35px 0px 30px 0px; }
+  .header__text {
+    font-size: 16px;
+    font-family: "Josefin Sans";
+    color: black;
+    line-height: 1.2; }
+  .header__button {
+    border-width: 1px;
+    border-color: #c2c2c2;
+    border-style: solid;
+    background: transparent;
+    font-size: 12px;
+    font-family: "Josefin Sans";
+    color: black;
+    padding: 8px;
+    margin-top: 27px; }
+    .header__button__adap {
+      display: none; }
+      @media (max-width: 768px) {
+        .header__button__adap {
+          width: 100%;
+          display: block;
+          background: #fff;
+          height: 70px; } }
+
+.menu {
+  width: 100%;
+  padding: 0px 20px;
+  margin: 0px 0px 90px 0px; }
+  @media (max-width: 768px) {
+    .menu {
+      padding: 0px 0px;
+      margin: 0px 0px 0px 0px; } }
+  .menu__conteiner {
+    max-width: 1120px;
+    margin: 0 auto;
+    min-height: 100px;
+    background: #fff;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.15);
+    padding: 40px 10px 40px 10px; }
+    @media (max-width: 768px) {
+      .menu__conteiner {
+        max-width: 100%;
+        padding: 0px 0px 0px 0px;
+        box-shadow: none; } }
+  .menu__wrapper {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between; }
+    @media (max-width: 768px) {
+      .menu__wrapper {
+        flex-direction: column; } }
+  .menu__item {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 33.333%; }
+    .menu__item:last-child {
+      margin-right: 0px; }
+    @media (max-width: 768px) {
+      .menu__item {
+        margin-right: 0px; } }
+    .menu__item .menu__photo {
+      height: 210px;
+      overflow: hidden; }
+      @media (max-width: 768px) {
+        .menu__item .menu__photo {
+          height: 280px; } }
+      @media (max-width: 510px) {
+        .menu__item .menu__photo {
+          height: 230px; } }
+      .menu__item .menu__photo img {
+        width: 100%;
+        transition: transform .3s;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; }
+        .menu__item .menu__photo img:hover {
+          transform: scale(1.4); }
+  .menu__title {
+    font-size: 18px;
+    font-family: "Josefin Sans";
+    color: black;
+    line-height: 1.2;
+    margin: 20px 0px 0px 20px; }
+  .menu__characters {
+    display: flex;
+    margin: 10px 0px 25px 20px; }
+    .menu__characters img {
+      margin-right: 5px;
+      margin-left: 5px; }
+      .menu__characters img:first-child {
+        margin-left: 0px; }
+
+.banan {
+  width: 100%;
+  padding: 0px 20px; }
+  @media (max-width: 768px) {
+    .banan {
+      padding: 0px 0px; } }
+  .banan__conteiner {
+    max-width: 1120px;
+    margin: 0 auto;
+    min-height: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.15);
+    display: flex; }
+    @media (max-width: 768px) {
+      .banan__conteiner {
+        flex-direction: column;
+        box-shadow: none; } }
+  .banan__main {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 33px 90px 33px 30px; }
+    @media (max-width: 1024px) {
+      .banan__main {
+        padding: 33px 60px 33px 20px; } }
+    @media (max-width: 768px) {
+      .banan__main {
+        padding: 33px 30px 33px 20px; } }
+  .banan__background {
+    flex: 50%;
+    overflow: hidden; }
+    .banan__background img {
+      width: 100%;
+      height: 100%;
+      transition: transform .3s;
+      object-position: center;
+      object-fit: cover; }
+      .banan__background img:hover {
+        transform: scale(1.3); }
+  .banan__title {
+    font-size: 32px;
+    font-family: "Playfair Display";
+    color: #055555; }
+  .banan__recipe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 30px 0px; }
+    .banan__recipe .div {
+      display: flex;
+      align-items: flex-end; }
+      .banan__recipe .div img {
+        margin-right: 5px; }
+  .banan__characters {
+    font-size: 16px;
+    font-family: "Josefin Sans";
+    color: #555555;
+    margin-right: 5px; }
+    .banan__characters:last-child {
+      margin-right: 0px; }
+  .banan__save {
+    border-width: 1px;
+    border-color: #c2c2c2;
+    border-style: solid;
+    width: 103px;
+    height: 26px;
+    background: transparent;
+    font-size: 12px;
+    font-family: "Josefin Sans";
+    color: black; }
+  .banan__text {
+    font-size: 16px;
+    font-family: "Josefin Sans";
+    color: black;
+    line-height: 1.2; }
+  .banan__subtitle {
+    font-size: 20px;
+    font-family: "Josefin Sans";
+    color: black;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 20px 0px 20px 0px; }
+
+.footer {
+  width: 100%;
+  padding: 0px 20px;
+  margin: 90px 0px 50px 0px; }
+  @media (max-width: 768px) {
+    .footer {
+      padding: 0px 0px;
+      margin: 0px 0px 0px 0px; } }
+  .footer__conteiner {
+    height: 180px;
+    padding: 0px 80px 0px 50px;
+    box-shadow: 0.366px 2.978px 7px 0px rgba(11, 12, 12, 0.14);
+    background: #2f2f2f;
+    margin: 0 auto;
+    max-width: 1120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    @media (max-width: 1024px) {
+      .footer__conteiner {
+        padding: 0px 40px 0px 30px; } }
+    @media (max-width: 768px) {
+      .footer__conteiner {
+        padding: 0px 20px 0px 20px; } }
+  .footer__link {
+    font-size: 12px;
+    font-family: "Josefin Sans"; }
+    .footer__link a {
+      color: rgba(254, 254, 254, 0.502); }
+    .footer__link span {
+      background: rgba(254, 254, 254, 0.502); }
+  .footer__massage {
+    font-size: 12px;
+    font-family: "Josefin Sans";
+    color: rgba(254, 254, 254, 0.502);
+    text-transform: uppercase; }
+  .footer__massanger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 15px;
+    margin-left: 15px; }
+  .footer__massangers {
+    position: relative;
+    top: 10px; }
+    .footer__massangers img {
+      width: 100%; }
+
+.recipe {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(218, 219, 219, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  .recipe__conteiner {
+    width: 320px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 30px 20px 20px 20px;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.15); }
+  .recipe__span {
+    height: 2px;
+    background: #dddddd;
+    width: 100%;
+    margin: 5px 0px 15px 0px; }
+  .recipe__header {
+    display: flex;
+    justify-content: space-between; }
+  .recipe__title {
+    font-size: 20px;
+    font-family: "Josefin Sans";
+    color: black; }
+  .recipe__tabs {
+    display: flex;
+    width: 170px;
+    margin: 0 auto;
+    justify-content: space-between; }
+  .recipe__tab {
+    font-size: 12px;
+    font-family: "JosefinSans";
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase; }
+  .recipe__items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0px; }
+  .recipe__item {
+    display: flex;
+    margin-bottom: 35px; }
+    .recipe__item:last-child {
+      margin-bottom: 0px; }
+    .recipe__item img {
+      width: 45px;
+      height: 50px; }
+    .recipe__item__text {
+      margin: 0px 0px 0px 15px; }
+    .recipe__item span {
+      font-size: 12px;
+      font-family: "Josefin Sans";
+      color: black;
+      margin-right: 4px; }
+    .recipe__item__title {
+      font-size: 12px;
+      font-family: "Josefin Sans";
+      color: black;
+      font-weight: bold;
+      margin-bottom: 7px; }
+    .recipe__item__subtext {
+      font-size: 16px;
+      font-family: "Josefin Sans";
+      color: black;
+      font-weight: bold;
+      line-height: 1; }
+  .recipe__button {
+    font-size: 12px;
+    font-family: "JosefinSans";
+    color: #010101;
+    text-transform: uppercase;
+    border-width: 1px;
+    border-color: #c2c2c2;
+    border-style: solid;
+    width: 103px;
+    height: 26px;
+    background: transparent; }
+
+.dropdown {
+  position: fixed;
+  left: -120%;
+  top: 100px;
+  width: 100%;
+  height: 100%;
+  background: #FC5F70;
+  z-index: 10;
+  transition: left .5s;
+  display: flex;
+  flex-direction: column;
+  padding: 70px 30px 0px 40px; }
+  .dropdown .dropdown__link {
+    margin-bottom: 30px; }
+    .dropdown .dropdown__link:last-child {
+      margin-bottom: 0px; }
+    .dropdown .dropdown__link a {
+      color: #fff;
+      font-size: 22px; }
+    .dropdown .dropdown__link span {
+      background: #fff;
+      height: 3px; }
+
+.body-overflow {
+  overflow: hidden; }
+
+.drop {
+  left: 0; }
+
+.recipeDisplay {
+  display: flex; }
+
+.topLine {
+  transform: translateY(10px) rotateZ(45deg); }
+
+.bottomLine {
+  transform: translateY(-8px) rotateZ(-45deg); }
+
+.centerLine {
+  transform: scaleX(0); }
