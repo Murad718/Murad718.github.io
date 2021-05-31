@@ -1,0 +1,191 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+	.header{
+		width:100%;
+		display:flex;
+		justify-content:space-between;
+		height:80px;
+		background:#FF9800;
+		align-items:center;
+		font-family: 'Montserrat', sans-serif;
+		&__logo{
+			cursor: pointer;
+			font-weight:500;
+			margin:0px 30px 0px 0px;
+			width:10%;
+			display:flex;
+			justify-content:center;
+			font-family: 'Stalinist One', cursive;
+			a{
+				font-size:35px;
+				transition:.3s all;
+				color: #000;
+				letter-spacing:2px;
+				&:hover{
+					color: #24BFF2;
+					text-shadow:0px 0px 10px #fff;
+				}
+			}
+		}
+		&__nav{
+			width:600px;
+			height:60%;
+			align-items:center;
+			display:flex;
+			ul{
+				width:100%;
+				display:flex;
+				position: relative;
+				height:100%;
+				align-items:center;
+				justify-content:space-between;
+				li{
+					cursor:pointer;
+					font-size:18px;
+					height:100%;
+					display:flex;
+					padding:0px 20px;
+					@media(max-width:1024px){
+						font-size:16px;
+						padding:0px 15px;
+					}
+					align-items:center;
+					justify-content:center;
+					a{	
+						z-index:3;
+						display: flex;
+						align-items:center;
+						height:100%;
+						color: #fff;
+					}
+				}
+				.animate__cursor{
+					position:absolute;
+					left:0;
+					transition:0.5s ease all;
+					top:0;
+					background:#2458F2;
+					opacity: 0;
+					height:100%;
+					transform: skew(-20deg);
+					z-index:1;
+					box-shadow:0px 0px 15px #fff;
+				}
+				.animate__click{
+					position:absolute;
+					left:0;
+					transform: skew(-20deg);
+					z-index:2;
+					box-shadow:0px 0px 15px #fff;
+					transition:0.5s ease all;
+					top:0;
+					background:#24BFF2;
+					opacity: 0;
+					height:100%;
+				}
+			}
+		}
+		&__phone{
+			font-size:22px;
+			width:20%;
+			display: flex;
+			justify-content: center;
+			letter-spacing:2px;
+			margin-left:30px;
+			@media(max-width:1024px){
+				font-size:18px;
+			}
+			a{
+				color: #fff;
+				transition:0.3s all;
+			}
+			a:hover{
+				color: #000;
+			}
+		}
+	}
+.main{
+	width:100%;
+	height:calc(100% - 230px);
+	padding:0px 20px;
+	&__conteiner{
+		max-width:1200px;
+		margin:0px auto 0px auto ;
+		display:flex;
+		height:100%;
+	}
+	&__text{
+		text-align:left;
+		font-family: 'Montserrat', sans-serif;
+		color:#171A1F;
+		width:60%;
+		margin-top:100px;
+	}
+	&__title{
+		font-size:60px;
+		font-weight:800;
+		margin-bottom:40px;
+	}
+	&__subtitle{
+		background:linear-gradient(-45deg,#24BFF2 0%,#2458F2 100%);
+		color:transparent;
+		-webkit-background-clip:text; 
+		font-size:40px;
+		font-weight:800;
+	}
+	&__images{
+		height:500px;
+		width:500px;
+		display: flex;
+		align-items:center;
+		justify-content:center ;
+		border-radius:50%;
+		background:#FF9800 ;
+		margin-top:50px;
+		transform: translateZ(20px);
+		box-shadow: 0px 4.56288px 50.1917px rgba(0,0,0,0.08);
+		img{
+			width:80%;
+			box-shadow: 0px 4.56288px 50.1917px rgba(0,0,0,0.08);
+			transform: translateZ(50px);
+			background:#fff;
+			border-radius:25%;
+		}		
+	}
+}
